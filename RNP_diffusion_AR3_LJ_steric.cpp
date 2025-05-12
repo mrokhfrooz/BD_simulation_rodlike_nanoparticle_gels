@@ -483,7 +483,7 @@ int main() {
 	float pidpid=pid;
 	
 	
-	auto start = chrono::high_resolution_clock::now(); // chat gpb this part
+	auto start = chrono::high_resolution_clock::now(); // print the current time
 	// get the current time
 	time_t currentTime = time(0);
 	// convert the current time to a string
@@ -495,7 +495,7 @@ int main() {
 	const double pi = 3.14159265358979323846;
 	double k_B = 1.3806e-23; // unit J / K
 	double T = 300;  // temperature
-	double mu = 0.001; // Pa·s% viscosity
+	double mu = 0.001; // PaÂ·s% viscosity
 	
 
 	double p =  85.958e-9; // RNP diameter
@@ -515,7 +515,7 @@ int main() {
 
 
 
-	double pratio = L_lowen / p; // Aspect ratio, See Fig 1's caption in : Löwen, Hartmut. "Brownian dynamics of hard spherocylinders." Physical Review E 50.2 (1994): 1232.
+	double pratio = L_lowen / p; // Aspect ratio, See Fig 1's caption in : LÃ¶wen, Hartmut. "Brownian dynamics of hard spherocylinders." Physical Review E 50.2 (1994): 1232.
 	double r_p= pratio-1; // Chen et al. defined the aspect ratio without considering the end-caps: Chen, Jing-Yao, et al. "Rheology and structure of suspensions of spherocylinders via Brownian dynamics simulations." Journal of Rheology 65.2 (2021): 273-288.
 	
 
@@ -571,7 +571,7 @@ int main() {
 
 	vector <int>     counter(step + 1);
 	vector <double>  msd(step + 1);
-    vector <double>  Ati(step + 1); // Equ 10 in "Molecular simulation of the diffusion mechanism of nanorods in cross-linked networks"†
+    vector <double>  Ati(step + 1); // Equ 10 in "Molecular simulation of the diffusion mechanism of nanorods in cross-linked networks"Â†
     vector <double>  msd_movazi(step + 1);
 	vector <double>  msd_internal(step + 1);
 	vector <double>  msd_theory(step + 1);
@@ -1580,7 +1580,7 @@ for (int k = 0; k < step; k++) {
 	cout << "Simulation finished at: " << timeString << endl;
 
 
-	auto end = chrono::high_resolution_clock::now();  // // chat gpb this part
+	auto end = chrono::high_resolution_clock::now();  // // print the current time
 	auto duration = chrono::duration_cast<chrono::seconds>(end - start);
 	cout << "Execution time: " << duration.count() << " seconds\n";
 
